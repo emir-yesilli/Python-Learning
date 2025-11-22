@@ -53,3 +53,14 @@ print(name[3::])
 print(name[:3:])
 print(name[::2])
 
+
+#--------------------Converting Variables--------------------
+
+myInteger = 20
+myString = "30"
+myList = ["10","20"]
+
+print(str(myInteger))
+print(int(myString))
+print(float(myInteger))
+print(int(myList[0])*2)
