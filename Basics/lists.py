@@ -151,4 +151,17 @@ print((isOk))
 
 print(3>5)
 
-#----------------------------------------------------------------------------------------
+
+#----------------------------------------Exercises---------------------------------------
+
+#1) List Average
+numberList = []
+while True:
+
+    number = (input("Enter a number: "))
+    if number == "q":
+        break
+    numberList.append(int(number))
+
+average = sum(numberList) / len(numberList)
+print(average)
