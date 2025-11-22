@@ -131,3 +131,24 @@ set1.discard(60)
 print(set1)
 
 
+
+#----------------------------------------Tuples----------------------------------------
+
+#Does the same work as a list except it is immutable
+myTuple = (10,20)
+print(myTuple[1])
+
+#   myTuple[0] = 100  --------> Error
+
+
+#----------------------------------------Boolean----------------------------------------
+#Mutable
+isOk = True
+print(type(isOk))
+print(isOk)
+isOk = False
+print((isOk))
+
+print(3>5)
+
+#----------------------------------------------------------------------------------------
