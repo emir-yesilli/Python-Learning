@@ -43,10 +43,13 @@ print(name.center(40))
 print(name[0])
 print(len(name))
 print("emir" in name)
+
+#   name[starting index : stopping index : stepping size]
 print(name[:4])
 print(name[4:])
 print(name[-3:-1])
 print(name.encode())
 print(name[3::])
-#------------------------------------------------------
+print(name[:3:])
+print(name[::2])
 
