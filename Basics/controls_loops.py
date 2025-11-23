@@ -124,7 +124,6 @@ for m in range(loopInt):
 matrixList = []
 matrixSumListLR = []
 matrixSumListRL = []
-indexQueue = 0
 
 matrix_dimension = int(input("Enter a matrix dimension: "))
 for row in range(matrix_dimension):
