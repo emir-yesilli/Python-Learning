@@ -1,5 +1,6 @@
 #----------------------------------------If Controls----------------------------------------
-from fontTools.voltLib.ast import Range
+from random import randint
+from random import shuffle
 
 print(1==1)
 print(1==2)
@@ -19,24 +20,68 @@ print("a" in myDictionary)
 print(1 in myDictionary.values())
 
 
-# ---Indentation is essential
+#---Indentation is essential
 
-# number = float(input("Enter a number: "))
-# if number % 2 == 0:
-#     print("Your number is even")
-# elif number % 2 == 1:
-#     print("Your number is odd")
-# else:
-#     print("Your number is not an integer")
+number = float(input("Enter a number: "))
+if number % 2 == 0:
+    print("Your number is even")
+elif number % 2 == 1:
+    print("Your number is odd")
+else:
+    print("Your number is not an integer")
 
 
 #----------------------------------------Loops----------------------------------------
 loopList = [10,20,30,40,50]
+tupleList = [("a","b"),("c","d"),("e","f")]
+dictionaryList = {"aaa":1,"bbb":2,"ccc":3}
+
 for x in loopList:
     print(x/5)
 
+for (k,l) in tupleList:
+    print(k)
+    print(l)
+
+for s in dictionaryList:
+    print(s)
+
+for c in dictionaryList.items():
+    print(c)
+
+for element in enumerate(loopList):
+    print(element)
+
+print(randint(0,100))
+
+#----------------------------------------Continue Break Pass-----------------------------
 
 
+for em in loopList:
+    if em == 30:
+        break
+    print(em)
+
+for es in loopList:
+    if es == 30:
+        continue
+    print(es)
+
+for er in loopList:
+    pass
+
+
+#---------------------------------------------While Loop----------------------------------
+
+x = 0
+y = 0
+while x <= 10:
+    print(x)
+    x += 1
+
+while y <= 4:
+    print(f"mylist: {myList[y]}")
+    y += 1
 
 #------Pyramid Exercise
 loopInt = int(input("Enter a odd number: "))
@@ -71,3 +116,32 @@ for m in range(loopInt):
     else:
         space_inner = loopInt - (2 * space) - 2
         print(" "* space + "*" + " " * space_inner + "*")
+
+
+
+#-----------Matrix Exercise
+
+matrixList = []
+matrixSumListLR = []
+matrixSumListRL = []
+indexQueue = 0
+
+matrix_dimension = int(input("Enter a matrix dimension: "))
+for row in range(matrix_dimension):
+    innerList = []
+    for col in range(matrix_dimension):
+        innerValues = int(input("Enter a number: "))
+        innerList.append(innerValues)
+    matrixList.append(innerList)
+
+print(matrixList)
+
+#Left-to-Right Diagonal
+for q in range(matrix_dimension):
+    matrixSumListLR.append(matrixList[q][q])
+print(sum(matrixSumListLR))
+
+#Right-to-Left Diagonal
+for w in range(matrix_dimension):
+    matrixSumListRL.append(matrixList[-1 - w][w])
+print(sum(matrixSumListRL))
