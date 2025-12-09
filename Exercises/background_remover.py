@@ -1,9 +1,9 @@
 from rembg import remove
-from PIL import Image
-import easygui as eg
-input_path = eg.fileopenbox(title='Metallica.jpeg')
-output_path = eg.filesavebox(title= "")
-output = remove(Image.open(input_path))
-output.save(output_path)
+input_path = "Materials/Metallica.jpeg"
+output_path = "Materials/output.png"
 
-print("completed")
+with open(input_path, "rb") as input_file:
+    with open(output_path,"wb") as output_file:
+        inputF = input_file.read()
+        output = remove(inputF)
+        output_file.write(output)
